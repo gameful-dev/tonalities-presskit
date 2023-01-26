@@ -22,10 +22,16 @@ img {
     display: block;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
 nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
 }
 
 nav a {
@@ -74,6 +80,19 @@ header h1 {
     text-transform: lowercase;
 }
 
+header div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/screenshots/screenshot5.png");
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 100%, 100% 16%);
+    opacity: 0.2;
+}
+
 main {
     max-width: 45rem;
     margin: 5rem auto;
@@ -107,7 +126,7 @@ footer {
 }
 
 .image-grid li {
-    width: calc(50% - 0.5rem);
+    width: 100%;
     margin-bottom: 1rem;
 }
 
@@ -122,17 +141,41 @@ footer {
     }
 
     .image-grid li {
-        width: calc(25% - 0.5rem);
+        width: calc(50% - 0.5rem);
     }
 }
 
+.modal-wrapper {
+    display: none;
+    z-index: 10;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
 
+.modal-wrapper.active {
+    display: flex;
+}
 
-.trailer {
+.screenshots {
     position: relative;
 }
 
-.trailer:before {
+.screenshots img {
+    border: 2px solid #4e0250;
+}
+
+.screenshots img:hover {
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+
+.screenshots:before {
     content: "";
     position: absolute;
     top: 0;
