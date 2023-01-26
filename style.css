@@ -15,6 +15,11 @@ body {
 
 a {
     color: #fff;
+    transition: color 0.4s ease;
+}
+
+a:hover {
+    color: #59C9A5;
 }
 
 img {
@@ -162,12 +167,40 @@ footer {
     display: flex;
 }
 
+.modal-wrapper img {
+    max-width: 90%;
+    width: auto;
+    height: auto;
+    border: 2px solid #fff;
+}
+
+.purchase-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.purchase-grid a {
+    display: block;
+    padding: 10px;
+    border: 2px solid #fff;
+    text-decoration: none;
+    text-align: center;
+    
+    transition: background 0.4s ease;
+}
+
+.purchase-grid a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
 .screenshots {
     position: relative;
 }
 
 .screenshots img {
     border: 2px solid #4e0250;
+    transition: border 0.4s ease;
 }
 
 .screenshots img:hover {
